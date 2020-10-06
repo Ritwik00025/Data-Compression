@@ -1,0 +1,61 @@
+def rle_encode(str1):
+    count = 0
+    length = len(str1)
+    i = 0
+    final_rle = []
+    rle = []
+    previous_character = str1[0]
+    while (i <= length - 1):
+        while (str1[i] == previous_character):
+            i = i + 1
+            count = count + 1
+            if i > length - 1:
+                break
+        x = [previous_character, count]
+        rle.append(x)
+        if i > length - 1:
+            break
+        previous_character = str1[i]
+        count = 0
+    alphabets = []
+    alpha_codes = []
+    for i in range(len(rle)):
+        rle[i][1] = bin(rle[i][1])
+    for i in range(0,len(rle)):
+        a = rle[i][0]
+        if a not in alphabets:
+            alphabets.append(a)
+    for i in range(len(alphabets)):
+        alpha_codes.append([alphabets[i],bin(i).replace("0b","")])
+    for i in range(len(rle)):
+        for j in range(len(alpha_codes)):
+            if alpha_codes[j][0] == rle[i][0]:
+                final_rle.append((alpha_codes[j][1],rle[i][1]))
+    final_rle = tuple(final_rle)
+    return [final_rle,alpha_codes]
+
+
+def rle_decode(decompressor):
+    final_str = []
+    final_strg = ''
+    str1 = []
+    final_rle1 = decompressor[0]
+    final_rle = list(map(list,final_rle1))
+    alpha_codes = decompressor[1]
+    for i in range(len(final_rle)):
+        for j in range(len(alpha_codes)):
+            if alpha_codes[j][1] == final_rle[i][0]:
+                str1.append([alpha_codes[j][0],final_rle[i][1]])
+    for i in range(len(str1)):
+        final_str.append([str1[i][0],int(str1[i][1],2)])
+    for i in range(len(final_str)):
+        for j in range(final_str[i][1]):
+            final_strg = final_strg + str(final_str[i][0])
+    return final_strg
+            
+
+str1 = input("Enter the string: ")
+print("String to be encoded: ", str1)
+a = rle_encode(str1)
+print("Run Length Encoding: ", a[0])
+print("Decoded string: ", rle_decode(a))
