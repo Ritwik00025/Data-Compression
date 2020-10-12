@@ -12,9 +12,9 @@ This repository will be updated every one or two weeks.
 
 Till date (12/10/2020), most of the techniques I've learnt over till now, consists of losless compression techniques and most of them are used to encode strings. The same can be used for text files, with minor modification requirements. All the files consists of the decoding part as well. The techniques are:
 1. Huffman Coding
-2. Run Length Encoding
-  2.1. For alphabet runs
-  2.2. For binary runs
+2. Run Length Encoding<br>
+  2.1. For alphabet runs<br>
+  2.2. For binary runs<br>
 3. Golomb Coding
 4. Tunstall Coding
 5. Arithmetic COding
