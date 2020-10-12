@@ -17,4 +17,4 @@ Till date (12/10/2020), most of the techniques I've learnt over till now, consis
   2.2. For binary runs<br>
 3. Golomb Coding
 4. Tunstall Coding
-5. Arithmetic COding
+5. Arithmetic Coding
