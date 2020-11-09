@@ -45,10 +45,10 @@ def tunstall_encode(alpha, prob, k, N, n, string):
     return[encode, final, n]
 
 
-def tunstall_decode(makefile):
-    encode = makefile[0]
-    final = makefile[1]
-    n = makefile[2]    
+def tunstall_decode(master_directory):
+    encode = master_directory[0]
+    final = master_directory[1]
+    n = master_directory[2]    
     decode = []
     while encode:
         decode.append(encode[:n])
@@ -81,5 +81,5 @@ for i in range(len(probability)):
     probability[i] = probability[i] / len_str
 N = len(alphabet)
 k = math.floor(((2 ** n) - N)/ (N - 1))
-makefile = tunstall_encode(alphabet, probability, k, N, n, string)
-print(tunstall_decode(makefile))
+master_directory = tunstall_encode(alphabet, probability, k, N, n, string)
+print(tunstall_decode(master_directory))
