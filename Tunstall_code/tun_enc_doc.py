@@ -1,8 +1,10 @@
 import math
 
+
 def binary_fix(i, n):
     binary = bin(i)
     return binary[2:].zfill(n)
+
 
 def tunstall_encode(alpha, prob, k, N, n, string):
     final = []
@@ -42,6 +44,7 @@ def tunstall_encode(alpha, prob, k, N, n, string):
     print("Generated tunstall code for string " + string + " is: " + encode)
     return[encode, final, n]
 
+
 def tunstall_decode(makefile):
     encode = makefile[0]
     final = makefile[1]
@@ -58,6 +61,7 @@ def tunstall_decode(makefile):
     print("---------------------------------------------------------------")
     print("Decoded string is:", end = " ")
     return string
+
 
 n = int(input("Enter number of bits: " ))
 string = input("Enter the string to be encoded: ")
