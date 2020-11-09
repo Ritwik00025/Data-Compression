@@ -48,9 +48,9 @@ def encode_golomb(n, m):
         return [unary_code + r1, m]
 
     
-def decode_golomb(x):
-    m = x[1]
-    code = list(x[0])
+def decode_golomb(master_directory):
+    m = master_directory[1]
+    code = list(master_directory[0])
     k1 = math.log(m, 2)
     k = math.ceil(k1)
     c = ((2 ** k) - m)
@@ -102,10 +102,10 @@ def decode_golomb(x):
         print(r, end = "\t")
         print(c, end = "\t")
         print(r + c)
-
-        
+    
+    
 n = int(input("Enter value of n: "))
 m = int(input("Enter value of m: "))
-x = encode_golomb(n, m)
-print("Golomb Code is: ", x[0])
-decode_golomb(x)
+master_directory = encode_golomb(n, m)
+print("Golomb Code is: ", master_directory[0])
+decode_golomb(master_directory)
