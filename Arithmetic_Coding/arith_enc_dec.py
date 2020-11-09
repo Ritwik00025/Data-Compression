@@ -15,6 +15,7 @@ def float_bin(number, k):
             break
     return b
 
+
 def tag_encode(alpha, prob, N, s):
     unity = []
     prob_range = 0.0
@@ -46,6 +47,7 @@ def tag_encode(alpha, prob, N, s):
     bin_code = float_bin(tag, k)
     print("Binary code for the sequence " + s + " is " + bin_code)
     return [tag, N, alpha, prob]
+
 
 def tag_decode(master):
     tag = master[0]
