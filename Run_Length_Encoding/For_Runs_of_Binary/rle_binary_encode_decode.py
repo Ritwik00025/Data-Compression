@@ -89,7 +89,7 @@ def rle_decode_binary(master_file):
         print("The decoded sequence is: " + decode)
 
 
-a = input("Enter the string: ")
+String = input("Enter the string: ")
 k = int(input("Enter number of bits: "))
-master_file = rle_encode_binary(a,k)
+master_file = rle_encode_binary(String,k)
 rle_decode_binary(master_file)
