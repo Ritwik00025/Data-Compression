@@ -41,6 +41,7 @@ def LZ77_encode(dictionary, sequence, len_code, search_buf_length, look_ahead_bu
         print()
     return [encode_list, dictionary, len_code]
 
+
 def LZ77_decode(master_directory):
     encode_list = master_directory[0]
     dictionary = master_directory[1]
@@ -59,7 +60,8 @@ def LZ77_decode(master_directory):
             decoded_sequence += decoded_sequence[-offset]
         decoded_sequence += symbol
     print("The original sequence is: ", decoded_sequence)
-    
+ 
+
 n = int(input("Enter the number of characters in dictionary: "))
 dictionary = dict()
 for i in range(n):
