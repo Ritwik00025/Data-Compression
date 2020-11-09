@@ -1,5 +1,6 @@
 import math
 
+
 def unary(q):
     code1 = []
     for i in range(q):
@@ -9,9 +10,11 @@ def unary(q):
     code = "".join(code2)
     return code
 
+
 def rem_trun(r, k):
     rem = bin(r)
     return rem[2:].zfill(k)
+
 
 def encode_golomb(n, m):
     q1 = (n / m)
@@ -99,7 +102,8 @@ def decode_golomb(x):
         print(r, end = "\t")
         print(c, end = "\t")
         print(r + c)
-    
+
+        
 n = int(input("Enter value of n: "))
 m = int(input("Enter value of m: "))
 x = encode_golomb(n, m)
