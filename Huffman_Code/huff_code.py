@@ -45,6 +45,7 @@ def huffman_encode(alpha, prob, s):
     print("Huffman Code for string " + s + " is " + encode)
     return [encode, code]
 
+
 def huffman_decode(master_file):
     encode = list(master_file[0])
     code = master_file[1]
@@ -67,6 +68,7 @@ def huffman_decode(master_file):
                 encode.pop(i + 2)
     print("Decoded string for code " + str(master_file[0]) + " is " + s)
 
+    
 string = input("Enter the string to be encoded: ")
 len_str = len(string)
 dictionary = dict()
