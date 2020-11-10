@@ -1,3 +1,5 @@
+<h1>How the Encoder Works???</h1>
+
 We start with passing the arguments as n and m in the encode_golomb function. Here, firstly we calculate the quotient, i.e. q and take its floor value. This q then further proceeds to another nested function to calculate the unary code. The unary code is calculated by assigning 1 for the magnitude of the integer that is the number of times 1 will be appended till the value of q. And a zero is appended at the end. The values in the list is then converted into an integer value and it is returned to the encode_golomb function.
 
 ```<br>
@@ -57,6 +59,13 @@ k = math.ceil(k1)
         return [unary_code + r1, m]
 ```
 The print statements describe the working of the encoder.
+
+<br>
+<hr>
+<br>
+<h1>How the Decoder Works???</h1>
+<br>
+
 
 Moving on to the decoding part, the decode_golomb takes the parameter of the list returned by the encode_golomb function and splits it into the golomb code and the value of m, storing them in different variables. Knowing the value of m, we calculate k and take ceil value to calculate c. Initially q is assigned as 0.
 
@@ -134,6 +143,12 @@ else:
 ```
  
 The display of values of different parameters tell us the working of the decoder.
+
+<br>
+<hr>
+<br>
+<h1>The Driver Code!!!</h1>
+<br>
 
 The driver code is executes all the above functionalities for a smooth operation.
 
