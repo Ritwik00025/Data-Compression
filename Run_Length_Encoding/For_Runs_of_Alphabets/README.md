@@ -124,6 +124,7 @@ for i in range(len(str1)):
 At last we return the string by concatenating the alphabets the number of times to their respective counts.
 
 <br>
+
 ```<br>
 for i in range(len(final_str)):
     for j in range(final_str[i][1]):
@@ -132,6 +133,22 @@ return final_strg
 ```
 <br>
 <hr>
+
+<br>
+<h1>The Driver Code!!!</h1>
+
+<br>
+The driver code inputs a string, prints it, calls the encoder function, stores it's return, print the encoded output and then prints the decoded output.
+
+```<br>
+str1 = input("Enter the string: ")
+print("String to be encoded: ", str1)
+master_directory = rle_encode(str1)
+print("Run Length Encoding: ", master_directory[0])
+print("Decoded string: ", rle_decode(master_directory))
+```
+<hr>
+
 
 <h3>If you like this code and the explanation, make sure to leave a star on my repository.</h3>
 
