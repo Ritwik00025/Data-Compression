@@ -23,4 +23,4 @@ Till date (08/11/2020), most of the techniques I've learnt over till now, consis
 
 
 <hr>
-<h3>If you like this code and the explanation, make sure to leave a star on my repository.😁</h3>
+<h3>If you like the codes and their explanation, make sure to leave a star on my repository.😁</h3>
