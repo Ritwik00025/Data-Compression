@@ -1,3 +1,11 @@
+import math
+
+
+def bin_fix(n, k):
+    num = bin(n)
+    return num[2:].zfill(k)
+
+
 def rle_encode(str1):
     count = 0
     length = len(str1)
@@ -19,20 +27,25 @@ def rle_encode(str1):
         count = 0
     alphabets = []
     alpha_codes = []
+    rle_max = max(rle, key=lambda x: x[1])
+    places_code = math.ceil(math.log(rle_max[1], 2))
     for i in range(len(rle)):
-        rle[i][1] = bin(rle[i][1])
+        rle[i][1] = bin_fix(rle[i][1], places_code)
     for i in range(0,len(rle)):
         a = rle[i][0]
         if a not in alphabets:
             alphabets.append(a)
+    places_alpha = math.ceil(math.log(len(alphabets),2)) 
     for i in range(len(alphabets)):
-        alpha_codes.append([alphabets[i],bin(i).replace("0b","")])
+        numb = bin_fix(i, places_alpha)
+        alpha_codes.append([alphabets[i],numb])
     for i in range(len(rle)):
         for j in range(len(alpha_codes)):
             if alpha_codes[j][0] == rle[i][0]:
                 final_rle.append((alpha_codes[j][1],rle[i][1]))
     final_rle = tuple(final_rle)
     return [final_rle,alpha_codes]
+
 
 
 def rle_decode(decompressor):
