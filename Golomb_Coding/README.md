@@ -1,3 +1,7 @@
+<h1>Introducción</h1>
+Golomb coding is a lossless data compression method invented by Solomon W. Golomb. Symbols following a geometric distribution will have a Golomb code as an optimal prefix code, making Golomb coding highly suitable for situations in which the occurrence of small values in the input stream is significantly more likely than large values.
+
+<hr>
 <h1>How the Encoder Works???</h1>
 
 We start with passing the arguments as n and m in the encode_golomb function. Here, firstly we calculate the quotient, i.e. q and take its floor value. This q then further proceeds to another nested function to calculate the unary code. The unary code is calculated by assigning 1 for the magnitude of the integer that is the number of times 1 will be appended till the value of q. And a zero is appended at the end. The values in the list is then converted into an integer value and it is returned to the encode_golomb function.
@@ -159,3 +163,7 @@ master_directory = encode_golomb(n, m)
 print("Golomb Code is: ", master_directory[0])
 decode_golomb(master_directory)
 ```
+
+<hr>
+
+<h3>If you like this code and the explanation, make sure to leave a star on my repository.😁</h3>
