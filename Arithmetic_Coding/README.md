@@ -1,3 +1,6 @@
+<h1>Introducción</h1>
+<br>
+
 Arithmetic coding maps a string of data (source) symbols to a code string in such a way that the original data can be recovered from the code string. The encoding and decoding algorithms perform arithmetic operations on the code string. 
 <hr>
 <br>
@@ -156,3 +159,5 @@ print("The sequence for tag " + str(tag) + " is " + seq)
 ```
 <br>
 <hr>
+
+<h3>If you like this code and the explanation, make sure to leave a star on my repository.😁</h3>
