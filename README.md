@@ -20,3 +20,7 @@ Till date (08/11/2020), most of the techniques I've learnt over till now, consis
 5. Arithmetic Coding
 6. Dictionary Techniques<br>
   6.1 LZ77<br>
+
+
+<hr>
+<h3>If you like this code and the explanation, make sure to leave a star on my repository.😁</h3>
