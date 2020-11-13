@@ -22,9 +22,10 @@ def LZ78_encode(dictionary, sequence):
     print("------------------------------")
     for i in range(len(encode_list)):
         for j in range(2):
-            print(encode_list[i][j], end = "\t")
+            print("  ", encode_list[i][j], end = "\t")
         print()
     return [encode_list, dictionary, index_dir]
+
 
 def LZ78_decode(master_directory):
     encode_list = master_directory[0]
@@ -44,7 +45,6 @@ def LZ78_decode(master_directory):
             decoded_sequence = decoded_sequence + str(index_dir[encode_list[i][0]])
             decoded_sequence = decoded_sequence + encode_list[i][1]
     print("The decoded sequence is: " + decoded_sequence)
-            
 
 
 n = int(input("Enter the number of characters in sequence: "))
